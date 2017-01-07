@@ -1,0 +1,228 @@
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <link rel= "stylesheet" type="text/css" href= "bubbleCodeHomepage.css">
+    <head>
+        <title> bubbleCode </title>
+    </head>
+    <script src= "bubbleCodeHomepage.js"></script>
+    <body>
+        <center>
+            <div id= "main">
+                <center>
+                    <body> 
+                        <canvas id="canvasRegn" width="1068" height="731"style="margin-top:0px" onclick="getClick (event)"> </canvas>
+                    </body>
+                </center>
+                <script src="http://code.jquery.com/jquery-1.8.3.min.js"> </script>
+                <script>
+                    var ctx;
+                    var imgBg;
+                    var imgDrops;
+                    var x = 0;
+                    var y = 0;
+                    var noOfDrops = 35;
+                    var fallingDrops = [];
+                    var imgList = ["http://i.imgur.com/FUdILfZ.gif",
+                    "http://i.imgur.com/b5RqUUr.gif",
+                    "http://i.imgur.com/FUdILfZ.gif",
+                    "http://i.imgur.com/b5RqUUr.gif",
+                    "http://i.imgur.com/FUdILfZ.gif",
+                    "http://i.imgur.com/b5RqUUr.gif",
+                    "http://i.imgur.com/FUdILfZ.gif",
+                    "http://i.imgur.com/b5RqUUr.gif",
+                    "http://i.imgur.com/FUdILfZ.gif",
+                    "http://i.imgur.com/b5RqUUr.gif",
+                    "http://i.imgur.com/FUdILfZ.gif",
+                    "http://i.imgur.com/b5RqUUr.gif",
+
+                    "http://i.imgur.com/FUdILfZ.gif",
+                    "http://i.imgur.com/jODbDvt.gif",
+                    "http://i.imgur.com/cTD2d1v.gif",
+                    "http://i.imgur.com/LvZ6YFl.gif",
+                    "http://i.imgur.com/IG9T18N.gif",
+                    "http://i.imgur.com/CJr2No9.gif",
+                    "http://i.imgur.com/8kjV8Ph.gif",
+                    "http://i.imgur.com/wlGnMBB.gif",
+                    "http://i.imgur.com/JW30gb7.gif",
+                    "http://i.imgur.com/eah0ecK.gif",
+                    "http://i.imgur.com/MhK17MK.gif",
+                    "http://i.imgur.com/0X5qPHZ.gif"];
+                     var commentsList = ["http://i.imgur.com/FUdILfZ.gif",
+                    "http://i.imgur.com/b5RqUUr.gif"];
+                    var score = 0;
+                    var number = 0;
+                    var tiempo =0;
+                    var curr = "";
+                    
+                    setInterval(function () {tiempo++, console.log(x)}, 1000);
+
+                    function drawBackground(){  
+                        ctx.drawImage(imgBg, 0, 0); //Background
+                    }
+
+
+                     function scoreBox() {
+                        
+                            var c = document.getElementById('canvasRegn');
+                            
+
+                            // ctx.Alpha=0.2;
+                            ctx.strokeStyle="red";
+                            ctx.fillStyle = 'rgba(225,0,0,0.3)';
+                            ctx.rect(0, 0, 1100, 100);
+                            ctx.fill();
+
+                        }
+
+                        function text (){
+                            var c = document.getElementById('canvasRegn');
+                            var ctx = c.getContext('2d');
+                            ctx.font = " bold 30px Arial";
+                            ctx.fillStyle="black";
+                            var txt = "Score:";
+                            ctx.fillText(txt,25,55);
+                            ctx.fillText(score,125,55);
+                        }
+
+                        function rightBubble () {
+                            var c = document.getElementById('canvasRegn');
+                            var ctx = c.getContext('2d');
+                            ctx.font = " bold 50px Arial";
+                            ctx.fillStyle="white";
+                            var syntax = "//";
+                            ctx.fillText(syntax,360,70);
+                            
+                        }
+
+                        function bye () {
+                            var c = document.getElementById('canvasRegn');
+                            var ctx = c.getContext('2d');
+                            ctx.font = " bold 40px Arial";
+                            ctx.fillStyle="white";
+                            var bye = "bye";
+                            ctx.fillText(bye,340,60);
+                            console.log("bye");
+                        }                      
+                    
+
+                        function findBubble (){
+                            var c = document.getElementById('canvasRegn');
+                            var ctx = c.getContext('2d');
+                            ctx.font = " bold 30px Arial";
+                            ctx.fillStyle="black";
+                            var txt = "Find:";
+                            ctx.fillText(txt,250,55);
+                            
+                        }
+
+                        function circle () {
+                            var c = document.getElementById('canvasRegn');
+                            var ctx = c.getContext('2d');
+                            ctx.beginPath();
+                            ctx.arc(375,50,41,0,2*Math.PI);
+                            ctx.fillStyle = '#000099';
+                            ctx.fill();
+                            //ctx.stroke();
+                        }
+
+                    function draw() {
+                        // var w = window.innerWidth;
+                        var canvasWidth = window.innerWidth * 0.73;
+                        var canvasHeight = window.innerHeight * 0.88;
+                        document.getElementById('canvasRegn').width = canvasWidth;
+                        document.getElementById('canvasRegn').height = canvasHeight;
+                            drawBackground();
+                            scoreBox();
+                            text();
+                            findBubble();
+                            circle();
+                            if (curr == "//") {
+                                rightBubble();
+                            }
+                            else if (curr == "bye") {
+                                bye();
+                            }
+                            else{}
+                        
+                        
+                        for (var i=0; i< noOfDrops; i++)
+                        {
+                            ctx.drawImage (fallingDrops[i].image, fallingDrops[i].x, fallingDrops[i].y);//The rain drop
+
+                            fallingDrops[i].y += fallingDrops[i].speed; //Set the falling speed
+                            if (fallingDrops[i].y > 731) {  //Repeat the raindrop when it falls out of view
+                                fallingDrops[i].y = 100; //Account for the image size
+                                fallingDrops[i].x = Math.random() * 731;//Make it appear randomly along the width 
+                                fallingDrops[i].image.src = imgList[Math.floor((Math.random() * (imgList.length-1)))];
+                            }
+                        }
+                    }
+
+                    function setup() {
+                        var canvas = document.getElementById('canvasRegn');
+                        if (canvas.getContext) {
+                                ctx = canvas.getContext('2d');
+                                imgBg = new Image();
+                                imgBg.src = "http://i.imgur.com/qNzjRDM.png";
+                        setInterval(draw, 36);
+                        for (var i = 0; i < noOfDrops; i++) {
+                            var fallingDr = new Object();
+                            fallingDr["image"] =  new Image();
+                            fallingDr.image.src = imgList[Math.floor((Math.random() * 20))];
+                                
+                            fallingDr["x"] = Math.random() * 731;
+                            fallingDr["y"] = Math.random() * 5;
+                            fallingDr["speed"] = 3 + Math.random() * 3.5;
+                            fallingDrops.push(fallingDr);
+                            }
+                             curr = "//";
+                            setTimeout(function() {
+                                curr = "bye";
+                                setTimeout(function() {
+                                    //curr = "end";
+                                    //setTimeout(function() {curr = "end";}, 60000);
+                                }, 30000);
+                            }, 30000);
+                        }
+                    }
+
+                   function getClick (event) {
+                        var xPos = event.x - document.getElementById("canvasRegn").offsetLeft;
+                        var yPos = event.y - document.getElementById("canvasRegn").offsetTop;
+
+                        for (var i=0; i< noOfDrops; i++){
+                               var xBub = fallingDrops[i].x;
+                               var yBub = fallingDrops[i].y;
+                                if (xPos <= xBub + 80 && yPos <= yBub + 80) {
+                                if (xPos >= xBub && yPos >= yBub){
+                                    if (tiempo < 30){
+                                        if (fallingDrops[i].image.src == commentsList[0]){ //image index for "//"
+                                            fallingDrops[i].x = Math.random() * 731;
+                                            fallingDrops[i].y = -25;
+                                            fallingDrops[i].speed = 2 + Math.random() * 2;
+                                            fallingDrops[i].image.src = imgList[Math.floor((Math.random() * (imgList.length-1)))];
+                                            score++;
+                                            number = 0;
+                                        }
+                                    }
+                                    else if (tiempo >= 30 && tiempo < 60){
+                                        if (fallingDrops[i].image.src == commentsList[1]){ //image index for "bye"
+                                            fallingDrops[i].x = Math.random() * 731;
+                                            fallingDrops[i].y = -25;
+                                            fallingDrops[i].speed = 2 + Math.random() * 2;
+                                            fallingDrops[i].image.src = imgList[Math.floor((Math.random() * (imgList.length-1)))];
+                                            score++;
+                                            number = 1;
+                                        }
+                                    }
+                                }
+                            }   
+                        }   
+                    }
+                setup();
+                </script>
+            </div>
+            <form method = "get" action = "bubbleCodeHomepage.html"> <button type = "submit" id = "button9"> Home </button> </form>
