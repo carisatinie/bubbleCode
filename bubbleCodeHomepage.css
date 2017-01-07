@@ -1,0 +1,128 @@
+body {
+	background-color: #C7ECE2;
+}
+#title {
+	color: #8A1667;
+	font-family: 'Raleway', sans-serif;
+	font-size: 8vw;
+	font-weight: bold;
+	padding-top: .5vw;
+}
+#title2 {
+	color: #8A1667;
+	font-family: 'Raleway', sans-serif;
+	font-size: 5vw;
+	font-weight: bold;
+}
+#main{
+	margin-top: 2.3vw;
+	width: 75%;
+	height: 90%;
+	background-color: #F5F2DB;
+	border: .5vw solid #8A1667;
+}
+#button1 {
+	width: 22vw;
+	height: 6vw;
+	margin-top: 1vw;
+    background-color: #80DEB8;
+    color:#6C0A4F;
+    border: none;
+    font-family: 'Raleway', sans-serif;
+    font-size: 3vw;
+    text-decoration:none;
+}
+#button2 { 
+	width: 10vw;
+	height: 4vw;
+    background-color: #80DEB8;
+    color:#6C0A4F;
+    border: none;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+    font-size: 2vw;
+    text-decoration:none;
+    position: fixed;
+    bottom: 4.5vw;
+    left: 13.4vw;
+}
+#button4 {
+	width: 20vw;
+	height: 4vw;
+    background-color: #80DEB8;
+    color:#6C0A4F;
+    border: none;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+    font-size: 2vw;
+    text-decoration:none;
+    position: fixed;
+    bottom: 4.5vw;
+    left: 23.9vw;
+}
+#button3 {
+	width: 10vw;
+	height: 4vw;
+    background-color: #80DEB8;
+    color:#6C0A4F;
+    border: none;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+    font-size: 2vw;
+    text-decoration:none;
+    position: fixed;
+    bottom: 4.5vw;
+    right: 13.4vw;
+}
+#buttonsHome {
+	width: 22vw;
+	height: 14vw;
+}
+#buttonsJavaScript {
+	width: 67vw;
+	height: 14 vw;
+}
+#mainText {
+	color: black;
+	font-family: 'Slabo 27px', serif;;
+	font-size: 3vw;
+	margin-right: 8vw;
+	margin-left: 8vw;
+	font-weight: normal;
+}
+#mainText2 {
+	color: black;
+	font-family: 'Slabo 27px', serif;;
+	font-size: 2.5vw;
+	margin-right: 8vw;
+	margin-left: 8vw;
+	font-weight: normal;
+}
+#mainText3 {
+	color: black;
+	font-family: 'Slabo 27px', serif;;
+	font-size: 2vw;
+	margin-right: 8vw;
+	margin-left: 8vw;
+	font-weight: normal;
+}
+#homeButton{
+	width: 150px;
+	height: 70px;
+	background: black;
+	position: relative;
+	left: 1100;
+	margin-top: 600px;
+}
+#button9 {
+	width: 150px;
+	height: 70px;
+	background: #80DEB8;
+	position: relative;
+	left: 430px;
+	margin-top: -728px;
+	font-size: 2.5vw;
+	color: #6C0A4F;
+
+
+}

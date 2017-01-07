@@ -1,0 +1,230 @@
+<html>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<link rel= "stylesheet" type="text/css" href= "bubbleCodeHomepage.css">
+	<head>
+		<title> bubbleCode </title>
+	</head>
+	<script src= "bubbleCodeHomepage.js"></script>
+	<body>
+		<center>
+			<div id= "main">
+				<!-- <div id= "homeButton"></div> -->
+				<!-- start homepage div -->
+				<div id= "home">
+					<h1 id = "title"> bubbleCode </h1>
+					<div id= "buttonsHome">
+						<button id = "button1" onclick = "selectTopics()"> Play </button>
+						<button id = "button1" onclick = "instructions1()"> Instructions </button>
+						<button id = "button1" onclick = "contact()"> Contact Us </button>
+					</div>
+				</div> <!-- end home -->
+				<!-- end homepage div -->
+				<div id= "contact">
+					<h1 id = "title2"> Contact Us </h1>
+					<p id= "mainText"> 
+						To contact a bubbleCode representative, please email officialbubblecode@gmail.com.
+					</p>
+					<button id = "button2" onclick = "homepage()"> Home </button>
+				</div>
+				<!-- start instructions divs -->
+				<div id = "instructions">
+					<div id= "instructions1">
+						<h1 id = "title2"> Instructions </h1>
+						<p id= "mainText"> 
+							Welcome to bubbleCode! To begin, you will be placed in the JavaScript world. Then, select a topic you would like to learn about! Once you complete this, you will learn about the topic and begin to code using bubbles!
+						</p>
+						<button id = "button3" onclick = "instructions2()"> Next </button>
+						<button id = "button2" onclick = "homepage()"> Home </button>
+					</div> <!-- end instructions page 1 -->
+					<div id= "instructions2">
+						<h1 id = "title2"> Instructions (Continued) </h1>
+						<h1 id= "mainText"> 
+							While you are playing, you can see what bubble icons you need to click at the top bar. Click as many of these bubble icons as you can in the allotted time (either thirty or twenty seconds, depending on the topic)! The more bubbles you click, the higher your score!
+						</h1>
+						<button id = "button2" onclick = "homepage()"> Home </button>
+						<button id = "button3" onclick = "instructions3()"> Next </button>
+					</div> <!-- end instructions page 2 -->
+					<div id= "instructions3">
+						<h1 id = "title2"> Instructions (Continued) </h1>
+						<h1 id= "mainText">
+							When you are using the bubbles to code, remember that order of what you click matters! This means that even if you have the number one in your code, you cannot write one wherever you want. It has to go exactly where the computer will expect it to go. There is a time and a place for each of the icons you are expected to click. 
+						</h1>
+						<button id = "button2" onclick = "homepage()"> Home </button>
+						<button id = "button3" onclick = "selectTopics()"> Play </button>
+					</div> <!-- end instructions page 3 -->
+				</div>
+				<!-- end instructions divs -->
+				<!-- start select topics div -->
+				<div id = "selectTopics">
+					<h1 id = "title"> JavaScript </h1>
+					<div id="buttonsJavaScript">
+						<button id = "button1" onclick = "comments()"> Comments </button>
+						<button id = "button1" onclick = "variables()"> Variables </button>
+						<button id = "button1" onclick = "functions()"> Functions </button>
+						<button id = "button1" onclick = "whileLoops()"> While Loops </button>
+						<button id = "button1" onclick = "conditionals()"> Conditionals </button>
+						<button id = "button1" onclick = "forLoops()"> For Loops </button>
+					</div>
+					<button id = "button2" onclick = "homepage()"> Home </button>
+				</div>
+				<!-- end select topics div -->
+				<!-- start teaching div -->
+				<div id = "topicChosen">
+					<div id= "comments">
+						<h1 id = "title2"> About Comments </h1>
+						<p id= "mainText2">
+							Sometimes when coding, programmers do not want everything they write to be used by the computer when running their program. This is when coders use comments! When programming, it is good practice to use comments to create English summaries of what the code means, so people who do not know how to code still know what the code does. Now we are going to code a comment!
+						</p>
+						<button id = "button2" onclick = "homepage()"> Home </button>
+						<button id = "button3" onclick = "comments2()"> Next </button>
+						<button id = "button4" onclick = "selectTopics()"> Back To Topics </button>
+					</div>
+					<div id= "functions">
+						<h1 id = "title2"> About Functions </h1>
+						<p id= "mainText2">
+							Functions are used to group blocks of code. They allow these blocks of code to be called, or carried out, multiple times within a computer program. Functions can be named using any name you want, but typically these names should reflect what the function does. In JavaScript, these names are written in camelCase. This means that the first letter of every word (starting on the second word of the function's name), and the rest of the letters are lowercase. Now we are going to create a function!
+						</p>
+						<button id = "button2" onclick = "homepage()"> Home </button>
+						<button id = "button3" onclick = "functions2()"> Next </button>
+						<button id = "button4" onclick = "selectTopics()"> Back To Topics </button>
+					</div>
+					<div id= "variables">
+						<h1 id = "title2"> About Variables </h1>
+						<p id= "mainText2">
+							Often, programmers need to keep track of numbers or letters. When this happens, they assign these values that they need to keep track of to their best friends, VARIABLES! Now we are going to create a variable!
+						</p>
+						<button id = "button2" onclick = "homepage()"> Home </button>
+						<button id = "button3" onclick = "variables2()"> Next </button>
+						<button id = "button4" onclick = "selectTopics()"> Back To Topics </button>
+					</div>
+					<div id= "whileLoops">
+						<h1 id = "title2"> About While Loops </h1>
+						<p id= "mainText2">
+							When expressing actions that only occur during specific instances, coders use while loops. This means while one thing is true, we want something else to happen as well. Now we are going to code a while loop!
+						</p>
+						<button id = "button2" onclick = "homepage()"> Home </button>
+						<button id = "button3" onclick = "while2()"> Next </button>
+						<button id = "button4" onclick = "selectTopics()"> Back To Topics </button>
+					</div>
+					<div id= "conditionals">
+						<h1 id = "title2"> About Conditionals </h1>
+						<p id= "mainText2">
+							Sometimes, coders want code to run only under certain circumstances. To do this, they use conditionals. These conditionals create certain conditions that must be true for  the code inside of the conditionals to be carried out. Now we are going to code a conditional!
+						</p>
+						<button id = "button2" onclick = "homepage()"> Home </button>
+						<button id = "button3" onclick = "conditionals2()"> Next </button>
+						<button id = "button4" onclick = "selectTopics()"> Back To Topics </button>
+					</div>
+					<div id= "forLoops">
+						<h1 id = "title2"> About For Loops </h1>
+						<p id= "mainText2">
+							Programmers use for loops when they want to do the same thing a certain number of times. To keep track of the number of times the loop runs, we use a variable and then change this variable each time the loop runs. Now we are going to code a for loop!
+						</p>
+						<button id = "button2" onclick = "homepage()"> Home </button>
+						<button id = "button3" onclick = "for2()"> Next </button>
+						<button id = "button4" onclick = "selectTopics()"> Back To Topics </button>
+					</div>
+				</div>
+				<!-- end teaching div -->
+				<!-- start show code div -->
+				<div id = "teachCode">
+					<div id = "commentsTeach">
+						<h1 id = "title2"> Comments (Continued) </h1>
+						<p id= "mainText2">
+							This is what a comment looks like:
+						</p>
+						<p id= "mainText2">
+							//bye
+						</p>
+						<p id= "mainText2">
+							Note how there are two forward slashes (without any spaces between them) at the beginning of the line. Everything on the rest of the line following those slashes is a comment. In this case, our comment is "bye." Get ready to code!
+						</p>
+						<form method = "get" action = "bubbleCodeComments.html"> <button type = "submit" id = "button3"> Play </button> </form>
+						<!-- <button id = "button3" onclick = "facebook.com"> Play </button> -->
+						<button id = "button2" onclick = "homepage()"> Home </button>
+						<button id = "button4" onclick = "selectTopics()"> Back To Topics </button>
+					</div>
+					<div id = "functionsTeach">
+						<h1 id = "title2"> Functions (Continued) </h1>
+						<p id= "mainText3">
+							This is what a basic function declaration looks like:
+						</p>
+						<p id= "mainText3">
+							function myFunc() {}
+						</p>
+						<p id= "mainText3">
+							The first part of a function declaration is the keyword "function." All programming languages have sets of keywords. These keywords cannot be used as variable, function, or class names. The name of this function is "myFunc()." Remember, the name of your function does not effect how your function will work. The parentheses are there to accept optional things called parameters. For now, don't worry about what those are, just know that they can go inside of the parentheses. The curly brackets ("{}") are where you put the code that belongs to the function. Get ready to code!
+						</p>
+						<form method = "get" action = "bubbleCodeFunctions.html"> <button type = "submit" id = "button3"> Play </button> </form>
+						<button id = "button2" onclick = "homepage()"> Home </button>
+						<button id = "button4" onclick = "selectTopics()"> Back To Topics </button>
+					</div>
+					<div id = "variablesTeach">
+						<h1 id = "title2"> Variables (Continued) </h1>
+						<p id= "mainText3">
+							This is what a basic variable declaration looks like:
+						</p>
+						<p id= "mainText3">
+							var x = 5;
+						</p>
+						<p id= "mainText3">
+							In JavaScript, just like algebra, we can use variables to hold values and we can use variables in equations. In a JavaScript variable declaration, you start with the keyword "var," to tell the computer you are creating a variable. Then, you choose the name of your variable. We chose "x." Remember, the name of the variable does not change how your variable will work. Then, we set "x" equal to "5". You can set a variable to integers, floating point numbers (numbers with decimals), and even strings (words). At the end of the line, we put a semicolon. Semicolons belong at the end of every line of code in JavaScript. Get ready to code!
+						</p>
+						<form method = "get" action = "bubbleCodeVariables.html"> <button type = "submit" id = "button3"> Play </button> </form>
+						<button id = "button2" onclick = "homepage()"> Home </button>
+						<button id = "button4" onclick = "selectTopics()"> Back To Topics </button>
+					</div>
+					<div id = "whileTeach">
+						<h1 id = "title2"> While Loops (Continued) </h1>
+						<p id= "mainText3">
+							This is what a basic while loop looks like:
+						</p>
+						<p id= "mainText3">
+								while (1<2) {}
+						</p>
+						<p id= "mainText3">
+							First, we start off with the keyword "while," which indicates that we are making a while loop. Then, we have parentheses. Inside of these parentheses we have the statement that must be true in order for the code inside the curly brackets ("{}") to run. Here, 1 must be less than 2 for the code to run. But 1 is always less than 2! Typically, variables are used (for example substitute 1 with x) in while loops so the statement isn't always true. To complete the while loop, put the code that you want to run inside of the curly brackets ("{}"). Get ready to code!
+						</p>
+						<form method = "get" action = "bubbleCodeWhile.html"> <button type = "submit" id = "button3"> Play </button> </form>
+						<button id = "button2" onclick = "homepage()"> Home </button>
+						<button id = "button4" onclick = "selectTopics()"> Back To Topics </button>
+					</div>
+					<div id = "conditionalsTeach">
+						<h1 id = "title2"> Conditionals (Continued) </h1>
+						<p id= "mainText3">
+							This is what a basic conditional looks like:
+						</p>
+						<p id= "mainText3">
+								if(0>1) {}	
+						</p>
+						<p id= "mainText3">
+							A conditional always starts off with the keyword "if." Then, we have parentheses. Inside of these parentheses we have the statement that must be true in order for the code inside the curly brackets ("{}") to run. Here, the condition is that 0 must be less than 1. 0 is always less than 1, so the code will always run. Typically, variables are used (for example, you could substitute 1 with x) when creating the conditions. To finish the conditional, put the code that you want to run inside the curly brackets ("{}"). Get ready to code!
+						</p>
+						<form method = "get" action = "bubbleCodeConditionals.html"> <button type = "submit" id = "button3"> Play </button> </form>
+						<button id = "button2" onclick = "homepage()"> Home </button>
+						<button id = "button4" onclick = "selectTopics()"> Back To Topics </button>
+					</div>
+					<div id = "forTeach">
+						<h1 id = "title2"> For Loops (Continued) </h1>
+						<p id= "mainText3">
+							This is what a basic for loop looks like:
+						</p>
+						<p id= "mainText3">
+								for (var i = 0; i < 10; i++) {}
+						</p>
+						<p id= "mainText3">
+							For loops always start off with the keyword "for." Then, we have parentheses. Inside of the parentheses, we create the variable "i" and set it equal to 0 ("var i = 0;."" Then we have the condition that i must be less than 10 ("i < 10;"). The last thing inside of the parentheses is "i++". This means that each time the code inside the for loop runs, 1 will be added to i. Due to this, our for loop will run 10 times! Note that in between each part of our parentheses we have semicolons. To fini
+							sh the for loop, put the code that you want repeated inside the curly brackets ("{}"). Get ready to code!
+						</p>
+						<form method = "get" action = "bubbleCodeFor.html"> <button type = "submit" id = "button3"> Play </button> </form>
+						<button id = "button2" onclick = "homepage()"> Home </button>
+						<button id = "button4" onclick = "selectTopics()"> Back To Topics </button>
+					</div>
+				</div>
+				<!-- end show code div -->
+		</center>
+	</body>
+</html>
